@@ -1,0 +1,21 @@
+batch_size: 64
+epochs: 100
+eval_every_n_epochs: 1
+log_every_n_steps: 50
+weight_decay: 1e-6
+init_lr: 0.001
+gpu: cuda:0
+task_name: qm8
+
+model: 
+  type: gin
+  num_layer: 5
+  emb_dim: 256
+  feat_dim: 512
+  pool: mean
+  drop_ratio: 0.2
+
+dataset:
+  num_workers: 4
+  valid_size: 0.1
+  test_size: 0.1
